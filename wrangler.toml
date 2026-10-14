@@ -1,0 +1,33 @@
+# Cloudflare Workers/Pages configuration for the OpenNext Cloudflare adapter.
+# Docs: https://opennext.js.org/cloudflare
+#
+# Note: the older "@cloudflare/next-on-pages" adapter is deprecated as of
+# 2026 — this project is set up for its replacement, "@opennextjs/cloudflare".
+#
+# @opennextjs/cloudflare and wrangler are intentionally NOT pinned in
+# package.json — their compatible version pairing changes too often to pin
+# safely from here. Before your first deploy, run once:
+#
+#   npm install --save-dev @opennextjs/cloudflare@latest wrangler@latest
+#
+# then use `npm run cf:deploy`. If you hit a wrangler install/build error on
+# Windows mentioning ERR_UNSUPPORTED_ESM_URL_SCHEME, that's a known bug in
+# some wrangler 4.86–4.95 builds — run
+# `npm install --save-dev wrangler@latest` again to pick up the fix, or pin
+# an older/newer patch version manually if it recurs.
+
+name = "odestasoft"
+main = ".open-next/worker.js"
+compatibility_date = "2026-08-11"
+compatibility_flags = ["nodejs_compat"]
+
+[assets]
+directory = ".open-next/assets"
+binding = "ASSETS"
+
+# Set secrets via the CLI instead of committing them here:
+#   wrangler secret put RESEND_API_KEY
+#   wrangler secret put CONTACT_TO_EMAIL
+#   wrangler secret put CONTACT_FROM_EMAIL
+# Or add them in the Cloudflare dashboard under
+# Workers & Pages → your project → Settings → Variables and Secrets.

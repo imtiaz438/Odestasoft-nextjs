@@ -1,0 +1,185 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #ffffff;
+  --bg-soft: #f8fafc;
+  --bg-soft-2: #f1f5f9;
+  --border: #e2e8f0;
+  --ink: #0f172a;
+  --body: #475569;
+  --muted: #94a3b8;
+  --accent: #10b981;
+  --accent-2: #34d399;
+  --accent-soft: #d1fae5;
+  --dark: #0f172a;
+  --shadow: 0 1px 2px rgba(15, 23, 42, 0.04), 0 12px 32px rgba(15, 23, 42, 0.06);
+}
+
+.dark {
+  --bg: #0f172a;
+  --bg-soft: #0b1220;
+  --bg-soft-2: #111a2e;
+  --border: #1e293b;
+  --ink: #f8fafc;
+  --body: #94a3b8;
+  --muted: #64748b;
+  --accent: #34d399;
+  --accent-2: #6ee7b7;
+  --accent-soft: #0b2a20;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 20px 48px rgba(0, 0, 0, 0.45);
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--body);
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.3s, color 0.3s;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
+
+#insights{
+  display: none;
+}
+
+.theme-display{
+  display: none;
+}
+
+.consult{
+  color: #fff;
+  background: #10b981;
+}
+
+.logo-display{
+  font-size: 1.8rem;
+}
+
+.mobile-bg{
+  background: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------------------------------------------------------------
+   Section rhythm — replaces the previous uniform 112px everywhere.
+   Sections now alternate between a "major" beat (new topic) and a
+   "minor" beat (closely related content directly below it), so
+   related sections (Services → AI Hub, Stats → Why Us) sit closer
+   together instead of each getting the same large gap.
+------------------------------------------------------------------ */
+.section-major {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+.section-minor {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.section-tight {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .section-major {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+  .section-minor {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.wrap {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+@media (max-width: 640px) {
+  .wrap {
+    padding: 0 20px;
+  }
+}
+
+.eyebrow {
+  font-family: var(--font-plex-mono), monospace;
+  font-size: 12.5px;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 15px 28px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 12px 28px rgba(16, 185, 129, 0.25);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  border: 1.5px solid var(--border);
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 15px 28px;
+  border-radius: 999px;
+  transition: border-color 0.2s;
+  background: var(--bg);
+}
+
+.btn-secondary:hover {
+  border-color: var(--ink);
+}
+
+.card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}

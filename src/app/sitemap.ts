@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import { services } from "@/data/services";
 import { caseStudies } from "@/data/caseStudies";
+import { insights } from "@/data/insights";
 import { siteConfig } from "@/data/nav";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -33,5 +34,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticRoutes, ...serviceRoutes, ...caseStudyRoutes];
+  const insightRoutes: MetadataRoute.Sitemap = insights.map((i) => ({
+    url: `${base}/insights/${i.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.6,
+  }));
+
+  return [...staticRoutes, ...serviceRoutes, ...caseStudyRoutes, ...insightRoutes];
 }

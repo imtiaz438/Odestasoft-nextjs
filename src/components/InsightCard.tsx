@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Insight } from "@/types";
 
 export function InsightCard({ insight }: { insight: Insight }) {
@@ -14,9 +15,9 @@ export function InsightCard({ insight }: { insight: Insight }) {
       <div className="p-5">
         <h4 className="mb-2 text-[15px] font-bold text-ink">{insight.title}</h4>
         <p className="mb-3 text-[13px] text-body">{insight.body}</p>
-        <span className="text-[12.5px] font-bold text-muted">
-          Coming soon
-        </span>
+        <Link href={`/insights/${insight.slug}`} className="text-[12.5px] font-bold text-brand">
+          Read insight →
+        </Link>
       </div>
     </div>
   );

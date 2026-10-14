@@ -71,4 +71,6 @@ export interface Insight {
   gradient: [string, string];
   title: string;
   body: string;
+  readTime: string;
+  sections: { heading: string; paragraphs: string[] }[];
 }

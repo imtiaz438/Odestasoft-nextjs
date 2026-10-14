@@ -9,6 +9,7 @@ import { FAQAccordion } from "@/components/FAQAccordion";
 import { ContactForm } from "@/components/ContactForm";
 import { SectionHead } from "@/components/SectionHead";
 import { InsightCard } from "@/components/InsightCard";
+import { RescueAudit } from "@/components/RescueAudit";
 import { services } from "@/data/services";
 import { caseStudies } from "@/data/caseStudies";
 import { testimonials } from "@/data/testimonials";
@@ -35,6 +36,29 @@ const PROCESS = [
   { n: "05", title: "Test", body: "Functional, security, and load testing." },
   { n: "06", title: "Launch", body: "Production deployment with monitoring." },
   { n: "07", title: "Support", body: "Ongoing maintenance and iteration." },
+];
+
+const CLIENT_VIEW = [
+  {
+    when: "Week one",
+    title: "You talk to the engineers",
+    body: "Discovery and architecture happen directly with the people who will build it — no account-manager telephone game.",
+  },
+  {
+    when: "Every week",
+    title: "You see working software",
+    body: "A live demo of what's actually running, not slideware. You set the priorities for the following week.",
+  },
+  {
+    when: "Throughout",
+    title: "You always know the status",
+    body: "Direct access to the team and a clear view of what's shipping next. No quarterly surprises.",
+  },
+  {
+    when: "After launch",
+    title: "We stay reachable",
+    body: "Production monitoring from day one, and a team that answers when something needs attention — well after the invoice.",
+  },
 ];
 
 const WHY_US = [
@@ -221,6 +245,22 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+          <div className="mt-10 rounded-card border border-line bg-bgsoft p-8 sm:p-10">
+            <h3 className="mb-2 text-xl font-bold text-ink">What it feels like from your side.</h3>
+            <p className="mb-8 max-w-[640px] text-[14.5px] text-body">
+              The steps above are how we organize the work. This is what you experience while it&rsquo;s
+              happening.
+            </p>
+            <div className="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-4">
+              {CLIENT_VIEW.map((c) => (
+                <div key={c.title}>
+                  <div className="mb-2 font-mono text-xs font-semibold text-brand">{c.when}</div>
+                  <h4 className="mb-1.5 text-[15px] font-bold text-ink">{c.title}</h4>
+                  <p className="text-[13.5px] text-body">{c.body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
@@ -297,6 +337,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Rescue audit */}
+      <RescueAudit />
 
       {/* FAQ */}
       <section id="faq" className="section-minor bg-bgsoft">

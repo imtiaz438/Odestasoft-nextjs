@@ -20,7 +20,7 @@ export default function InsightsPage() {
       <PageHeader
         eyebrow="Insights"
         title="Engineering perspective, not marketing filler."
-        lede="Notes from the team on AI, cloud, software delivery, and security. Full articles are still being written — these are the topics queued up first."
+        lede="Notes from the team on AI, cloud, software delivery, and security."
       />
 
       <section className="section-major">

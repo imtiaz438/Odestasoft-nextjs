@@ -20,7 +20,7 @@ export default function CaseStudiesPage() {
       <PageHeader
         eyebrow="Case studies"
         title="Selected engineering work."
-        lede="The case studies below are illustrative examples prepared for review — replace with real, client-approved project details, screenshots, and metrics before publishing."
+        lede="A selection of recent client engagements."
         primaryCta={{ label: "Schedule Consultation", href: "/contact" }}
         secondaryCta={{ label: "See all services", href: "/services" }}
       />

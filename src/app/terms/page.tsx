@@ -53,10 +53,10 @@ export default function TermsPage() {
 
             <h2>4. No Guarantee of Outcomes</h2>
             <p>
-              Case studies, timelines, and pricing ranges shown on the Site are illustrative and for
-              general guidance only. They do not constitute a binding quote, guarantee of results, or
-              offer. Actual project scope, timeline, and cost are determined individually through
-              direct discussion and a separate signed agreement.
+              Case studies describe past client engagements; timelines and pricing ranges shown on
+              the Site are for general guidance only. They do not constitute a binding quote,
+              guarantee of results, or offer. Actual project scope, timeline, and cost are
+              determined individually through direct discussion and a separate signed agreement.
             </p>
 
             <h2>5. Third-Party Links</h2>

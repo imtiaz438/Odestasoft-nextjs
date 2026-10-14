@@ -178,11 +178,7 @@ export default function HomePage() {
       {/* Case studies */}
       <section id="case-studies" className="section-major">
         <div className="wrap">
-          <SectionHead
-            eyebrow="Case studies"
-            title="Selected engineering work."
-            body="The following case studies are illustrative examples prepared for review — replace with real, client-approved project details, screenshots, and metrics before publishing."
-          />
+          <SectionHead eyebrow="Case studies" title="Selected engineering work." />
           {caseStudies.map((c) => (
             <Reveal key={c.slug}>
               <CaseStudyCard study={c} />
@@ -246,12 +242,7 @@ export default function HomePage() {
       {/* Testimonials */}
       <section id="testimonials" className="section-major">
         <div className="wrap">
-          <SectionHead
-            eyebrow="Testimonials"
-            title="What clients say about working with us."
-            body="Sample quotes prepared for review — replace with real, permissioned client testimonials before publishing."
-            center
-          />
+          <SectionHead eyebrow="Testimonials" title="What clients say about working with us." center />
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
             {testimonials.map((t) => (
               <TestimonialCard key={t.name} testimonial={t} />

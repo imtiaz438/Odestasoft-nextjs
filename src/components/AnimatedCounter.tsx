@@ -12,12 +12,15 @@ export function AnimatedCounter({
 }) {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, margin: "-40px" });
-  const [value, setValue] = useState(0);
+  // Start at the final value so SSR / no-JS viewers (and search engines) see
+  // the real numbers; animate up from 0 once scrolled into view.
+  const [value, setValue] = useState(target);
 
   useEffect(() => {
     if (!inView) return;
     const step = Math.max(1, Math.round(target / 40));
     let current = 0;
+    setValue(0);
     const timer = setInterval(() => {
       current += step;
       if (current >= target) {

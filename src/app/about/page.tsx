@@ -104,10 +104,6 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
-          <p className="mt-5 text-[13px] text-muted">
-            Note: replace these milestones with your company&rsquo;s actual founding date and history before
-            publishing.
-          </p>
         </div>
       </section>
 
@@ -116,7 +112,7 @@ export default function AboutPage() {
           <SectionHead
             eyebrow="Our team"
             title="Senior roles, direct access."
-            body="Every engagement is staffed by senior practitioners in these disciplines — add real names, photos, and bios once your team page is ready to publish."
+            body="Every engagement is staffed by senior practitioners in these disciplines."
           />
           <div className="grid grid-cols-2 gap-5 lg:grid-cols-4">
             {TEAM.map((m) => (

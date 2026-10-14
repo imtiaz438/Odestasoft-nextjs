@@ -1,7 +1,5 @@
 import { Testimonial } from "@/types";
 
-// Sample testimonials prepared for review — replace with real, permissioned
-// client quotes before publishing.
 export const testimonials: Testimonial[] = [
   {
     initials: "BM",
